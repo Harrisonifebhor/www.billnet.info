@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Investor Circle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white text-gray-800">
+ <!-- Navigation Bar -->
+<header class="bg-white shadow-sm py-2">
+    <div class="flex justify-between items-center px-6 py-3 max-w-6xl mx-auto">
+      <!-- Logo aligned to the left -->
+      <div class="text-lg font-bold flex-shrink-0">Billionaire's Network</div>
+  
+      <!-- Hamburger Menu for Mobile -->
+      <button class="md:hidden flex items-center text-gray-600 focus:outline-none" id="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+  
+      <!-- Navigation Links & Button -->
+      <div class="hidden md:flex items-center space-x-6" id="menu">
+        <button class="px-4 py-2 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-500">
+          <a href="registration-page.html">Request Access</a>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div class="hidden md:hidden flex-col space-y-4 px-6 py-4 bg-gray-50 shadow-md" id="mobile-menu">
+      <button class="px-4 py-2 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-500">
+        <a href="registration-page.html">Request Access</a>
+      </button>
+    </div>
+  </header>
+  
+<!-- Registration and Login Section -->
+<!-- Registration and Login Section -->
+<section id="auth" class="py-12">
+  <div class="container mx-auto bg-white rounded shadow p-6 max-w-4xl">
+    <!-- Registration Form -->
+    <div id="registrationSection" class="mt-6">
+      <h2 class="text-2xl font-bold mb-4" id="regis">Register</h2>
+      <form 
+        action="https://formspree.io/f/xnnqlzqj" 
+        method="POST"
+        id="registrationForm" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Personal Information -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Personal Information</h3>
+        </div>
+        <input type="file" name="profile_picture" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Surname" name="surname" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="First Name" name="first_name" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Last Name" name="last_name" class="border p-3 rounded w-full" required>
+        <input type="date" placeholder="Date of Birth" name="dob" class="border p-3 rounded w-full" required>
+        <select name="gender" class="border p-3 rounded w-full" required>
+          <option value="">Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <input type="text" placeholder="Nationality" name="nationality" class="border p-3 rounded w-full" required>
+        <select name="marital_status" class="border p-3 rounded w-full" required>
+          <option value="">Marital Status</option>
+          <option>Single</option>
+          <option>Married</option>
+        </select>
+
+        <!-- Contact Information -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Contact Information</h3>
+        </div>
+        <input type="email" placeholder="Email Address" name="email" class="border p-3 rounded w-full" required>
+        <input type="tel" placeholder="Primary Phone Number" name="primary_phone" class="border p-3 rounded w-full" required>
+        <input type="tel" placeholder="Secondary Phone Number" name="secondary_phone" class="border p-3 rounded w-full">
+        <input type="text" placeholder="Residential Address" name="address" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="City/State" name="city_state" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Country" name="country" class="border p-3 rounded w-full" required>
+
+        <!-- Professional Information -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Professional Information</h3>
+        </div>
+        <input type="text" placeholder="Occupation" name="occupation" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Industry" name="industry" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Company Name" name="company_name" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Position/Title" name="position" class="border p-3 rounded w-full" required>
+        <input type="number" placeholder="Years of Experience" name="experience" class="border p-3 rounded w-full" required>
+        <input type="url" placeholder="Business Website (Optional)" name="website" class="border p-3 rounded w-full">
+
+        <!-- Financial Information -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Financial Information</h3>
+        </div>
+        <input type="text" placeholder="Annual Income (Range)" name="annual_income" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Weekly Average Financial Output" name="financial_output" class="border p-3 rounded w-full">
+        <input type="text" placeholder="Net Worth (Range)" name="net_worth" class="border p-3 rounded w-full">
+        <textarea placeholder="Primary Sources of Income" name="income_sources" class="border p-3 rounded w-full" required></textarea>
+        <textarea placeholder="Investment Interests" name="investment_interests" class="border p-3 rounded w-full"></textarea>
+
+        <!-- Network/Referral Information -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Network/Referral Information</h3>
+        </div>
+        <input type="text" placeholder="How Did You Hear About Us?" name="referral_source" class="border p-3 rounded w-full">
+        <input type="text" placeholder="Referred By (if applicable)" name="referred_by" class="border p-3 rounded w-full">
+        <input type="text" placeholder="Membership in Other Networks" name="other_networks" class="border p-3 rounded w-full">
+
+        <!-- Goals and Interests -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Goals and Interests</h3>
+        </div>
+        <textarea placeholder="Why Do You Want to Join?" name="join_reason" class="border p-3 rounded w-full" required></textarea>
+        <textarea placeholder="What Are Your Networking Goals?" name="networking_goals" class="border p-3 rounded w-full" required></textarea>
+        <textarea placeholder="Key Areas of Expertise/Value You Bring to the Network" name="key_expertise" class="border p-3 rounded w-full" required></textarea>
+
+        <!-- Security Information -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Security Information</h3>
+        </div>
+        <input type="file" placeholder="Identification Document" name="id_document" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Emergency Contact Name" name="emergency_contact_name" class="border p-3 rounded w-full" required>
+        <input type="tel" placeholder="Emergency Contact Phone" name="emergency_contact_phone" class="border p-3 rounded w-full" required>
+        <input type="text" placeholder="Emergency Contact Relationship" name="emergency_contact_relationship" class="border p-3 rounded w-full" required>
+
+        <!-- Agreement and Signature -->
+        <div class="col-span-2">
+          <h3 class="font-semibold mb-2">Agreement and Signature</h3>
+        </div>
+        <textarea placeholder="Declaration of Authenticity (Thumb Print)" name="authenticity_declaration" class="border p-3 rounded w-full" required></textarea>
+        <input type="text" placeholder="Signature (Digital or Physical)" name="signature" class="border p-3 rounded w-full" required>
+        <input type="date" placeholder="Date" name="date" class="border p-3 rounded w-full" required>
+
+        <!-- Submit Button -->
+        <div class="col-span-2 text-center">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+            Submit Registration
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
